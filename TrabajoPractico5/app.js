@@ -2,11 +2,15 @@ let suma
 let resta 
 let multiplicacion
 let division
+let numero1 
+numero1 = 10
+let numero2
+numero2 = 5
 
-suma = 5 + 10
-resta = 16 - 10
-multiplicacion = 4 * 2 
-division = 30 / 5
+suma = numero1 + numero2
+resta = numero1 - numero2
+multiplicacion = numero1 * numero2
+division = numero1 / numero2
 
 alert(suma)
 alert(resta)
@@ -14,11 +18,11 @@ alert(resta)
 console.log(multiplicacion)
 console.log(division)
 
-alert("El resultado de la suma de 5 + 10 es " +  suma)
-alert("El resultado de la resta de 16 - 10 es " +  resta)
+alert("El resultado de la suma de " + numero1 + " + "+numero2+"  es igual a " + suma)
+alert("El resultado de la resta de " + numero1 + " - "+ numero2 + " es igual a " +  resta)
 
-console.log("El resultado de la multiplicacion de 4 * 2 es " +  multiplicacion)
-console.log("El resultado de la division de 30 / 5 es " +  division)
+console.log("El resultado de la multiplicacion de " + numero1 + " por " + numero2 + "es igual a" +  multiplicacion)
+console.log("El resultado de la division de " + numero1 + " dividido entre "+ numero2 + " es igual a"  +  division)
 
 let nombreAlumno = "Raton"
 let apellidoAlumno = "Perez"
