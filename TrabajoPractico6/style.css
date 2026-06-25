@@ -1,0 +1,13 @@
+body{
+    background-color: aquamarine;
+font-family: Arial, Helvetica, sans-serif;
+color: blueviolet;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
