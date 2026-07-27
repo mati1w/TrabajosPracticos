@@ -13,5 +13,8 @@ botonColor.onclick = function () {
     parrafo.style.color = 'white'
 }
 botonLetra.onclick = function (){
-    parrafo.style.font = 'sans-serif'
+    parrafo.style.fontFamily = 'IMPACT'
+}
+botonTexto.onclick = function () {
+    parrafo.textContent = 'Hola bro :3'
 }
