@@ -1,4 +1,4 @@
-let edad = 19
+
 let resultado = document.querySelector("#resultado")
 let botonEjecutar = document.querySelector("#ejecutar")
 let botonEjecutar1 = document.querySelector("#ejecutar1")
@@ -9,8 +9,10 @@ let botonEjecutar5 = document.querySelector("#ejecutar5")
 let botonEjecutar6 = document.querySelector("#ejecutar6")
 
 // Ejercicio 1
-
+let edad = 0
+let input = document.querySelector ("input")
 botonEjecutar.onclick = function () {
+    edad = input.value
  if (edad >= 18) { 
     resultado.textContent = "Eres mayor de edad."
 }
