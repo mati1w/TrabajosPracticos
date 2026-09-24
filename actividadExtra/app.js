@@ -12,7 +12,7 @@ if (galletitas <= 10){
     parrafo.style.color = 'green'
  } else if ((galletitas >= 10) && (galletitas <= 20)) {
  parrafo.style.color = 'yellow'
- } else (){
+ } else {
      parrafo.style.color = 'red'
  }
 }
