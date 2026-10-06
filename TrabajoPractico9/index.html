@@ -1,14 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TP9 Funciones</title>
 </head>
 <body>
-    <h1>Trabajo práctico 9</h1>
-    <p id="parrafo"></p>
-    <input id="input" type="button" value="">
+
+    <!-- 1. mayor -->
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button id="btn1">ver mayor</button>
+    <p id="p1"></p>
+
+    <!-- 2. menor -->
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+    <button id="btn2">ver menor</button>
+    <p id="p2"></p>
+
+    <!-- 3. iguales -->
+    <input type="text" id="val1">
+    <input type="text" id="val2">
+    <button id="btn3">comparar</button>
+    <p id="p3"></p>
+
+    <!-- 4. iva -->
+    <input type="text" id="precio">
+    <button id="btn4">calcular iva</button>
+    <p id="p4"></p>
+
+    <!-- 5. saludo -->
+    <input type="text" id="nom">
+    <button id="btn5">saludar</button>
+    <p id="p5"></p>
+
+    <!-- 6 y 7. modos -->
+    <button id="btnOscuro">modo oscuro</button>
+    <button id="btnClaro">modo claro</button>
+
+    <script>
+        // 1. mayor
+        function mayor(numero1, numero2){
+            if(numero1 > numero2){
+                return numero1
+            }else{
+                return numero2
+            }
+        }
+
+        // 2. menor
+        function menor(numero1, numero2){
+            if(numero1 < numero2){
+                return numero1
+            }else{
+                return numero2
+            }
+        }
+
+        // 3. iguales o distintos
+        function iguales(n1, n2){
+            if(n1 == n2){
+                return 'son iguales'
+            }else{
+                return 'son diferentes'
+            }
+        }
+
+        // 4. iva
+        function calcularIva(compra){
+            let resultado = compra * 0.21
+            return resultado
+        }
+
+        // 5. saludar
+        function saludar(nombre){
+            let saludo
+            saludo = 'Hola ' + nombre + ' como estas'
+            return saludo
+        }
+
+        // 6. modo oscuro
+        function modoOscuro(){
+            let cuerpo = document.querySelector('body')
+            cuerpo.style.backgroundColor = 'black'
+            cuerpo.style.color = 'white'
+        }
+
+        // 7. modo claro
+        function modoClaro(){
+            let cuerpo = document.querySelector('body')
+            cuerpo.style.backgroundColor = 'white'
+            cuerpo.style.color = 'black'
+        }
+
+
+        // BOTONES Y EVENTOS
+
+        let boton1 = document.querySelector('#btn1')
+        boton1.onclick = function(){
+            let i1 = document.querySelector('#num1')
+            let i2 = document.querySelector('#num2')
+            let res = mayor(i1.value, i2.value)
+            let p = document.querySelector('#p1')
+            p.textContent = res
+        }
+
+        let boton2 = document.querySelector('#btn2')
+        boton2.onclick = function(){
+            let i1 = document.querySelector('#n1')
+            let i2 = document.querySelector('#n2')
+            let res = menor(i1.value, i2.value)
+            let p = document.querySelector('#p2')
+            p.textContent = res
+        }
+
+        let boton3 = document.querySelector('#btn3')
+        boton3.onclick = function(){
+            let i1 = document.querySelector('#val1')
+            let i2 = document.querySelector('#val2')
+            let res = iguales(i1.value, i2.value)
+            let p = document.querySelector('#p3')
+            p.textContent = res
+        }
+
+        let boton4 = document.querySelector('#btn4')
+        boton4.onclick = function(){
+            let i1 = document.querySelector('#precio')
+            let res = calcularIva(i1.value)
+            let p = document.querySelector('#p4')
+            p.textContent = res
+        }
+
+        let boton5 = document.querySelector('#btn5')
+        boton5.onclick = function(){
+            let i1 = document.querySelector('#nom')
+            let res = saludar(i1.value)
+            let p = document.querySelector('#p5')
+            p.textContent = res
+        }
+
+        let btnOsc = document.querySelector('#btnOscuro')
+        btnOsc.onclick = modoOscuro
+
+        let btnCla = document.querySelector('#btnClaro')
+        btnCla.onclick = modoClaro
+
+    </script>
 </body>
-<script src="app.js"></script>
 </html>
